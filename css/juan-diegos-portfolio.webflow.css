@@ -550,9 +550,13 @@ p {
 }
 
 .logo {
-  width: auto;
-  height: 45.883331298828125px;
-  max-width: 100.000001209575%;
+  display: block;
+  width: 50%;
+  height: auto;
+  max-width: none;
+  margin: auto auto auto 0px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .container-4 {
@@ -3598,9 +3602,10 @@ p {
 
   .logo {
     display: block;
-    width: auto;
-    height: 59.8833312988281px;
-    max-width: 100%;
+    width: 50%;
+    height: auto;
+    max-width: none;
+    margin: auto auto auto 0px;
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     -ms-grid-row-align: auto;
@@ -4535,12 +4540,45 @@ p {
     margin-top: 60px;
   }
 
+  .nav-menu.home {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .logo {
+    display: inline-block;
+    width: 40%;
+    margin-bottom: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    -webkit-transform: translate(20px, 0px);
+    -ms-transform: translate(20px, 0px);
+    transform: translate(20px, 0px);
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
   .menu-button {
+    margin: auto;
     background-color: #fff;
   }
 
   .menu-button.w--open {
     background-color: #000;
+  }
+
+  .container-4 {
+    max-width: none;
+    margin: auto;
+    padding-left: 0px;
+  }
+
+  .brand.w--current {
+    display: inline-block;
+    max-height: none;
+    max-width: none;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .nav-link {
@@ -4886,15 +4924,35 @@ p {
     font-size: 48px;
   }
 
+  .logo {
+    display: inline-block;
+    width: 40%;
+    margin-left: auto;
+    padding-left: 0px;
+    -webkit-transform: translate(0px, 25px) translate(70px, 0px) scale(1.4);
+    -ms-transform: translate(0px, 25px) translate(70px, 0px) scale(1.4);
+    transform: translate(0px, 25px) translate(70px, 0px) scale(1.4);
+  }
+
+  .menu-button {
+    margin-left: auto;
+  }
+
   .container-4 {
     margin-right: auto;
     margin-left: auto;
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 0px;
   }
 
   .brand {
     padding-left: 0px;
+  }
+
+  .brand.w--current {
+    position: static;
+    display: inline-block;
+    margin-left: auto;
   }
 
   .div-block.div-block-01 {
@@ -5498,6 +5556,9 @@ p {
 
   .logo {
     width: 150px;
+    -webkit-transform: translate(0px, 0px) translate(30px, 0px) scale(1.4);
+    -ms-transform: translate(0px, 0px) translate(30px, 0px) scale(1.4);
+    transform: translate(0px, 0px) translate(30px, 0px) scale(1.4);
   }
 
   .container-4 {
