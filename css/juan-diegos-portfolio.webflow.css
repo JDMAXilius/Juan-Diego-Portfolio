@@ -2761,7 +2761,7 @@ p {
 }
 
 .div-block-21 {
-  position: relative;
+  position: static;
   display: block;
   margin-right: auto;
   margin-bottom: auto;
@@ -2776,8 +2776,8 @@ p {
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  -o-object-fit: fill;
-  object-fit: fill;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .div-block-22 {
@@ -3525,6 +3525,10 @@ p {
     background-color: #333;
   }
 
+  .div-block-20.this {
+    position: static;
+  }
+
   .text-block-10 {
     color: #fff;
     font-size: 18px;
@@ -4163,6 +4167,7 @@ p {
   }
 
   .div-block-21 {
+    position: static;
     margin-bottom: auto;
     padding: 0px 10px 10px;
   }
@@ -4699,6 +4704,16 @@ p {
 
   .cards-grid-container {
     grid-column-gap: 20px;
+  }
+
+  .cards-image.tldr {
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
+  .div-block-21 {
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 
   .gallery-grid-container-4 {
