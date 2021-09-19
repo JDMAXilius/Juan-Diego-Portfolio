@@ -532,6 +532,11 @@ p {
 }
 
 .navbar-2 {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
   background-color: #d3d3d3;
   box-shadow: 1px 1px 75px 0 rgba(0, 0, 0, 0.1);
   color: #4b4b4b;
@@ -555,6 +560,9 @@ p {
   height: auto;
   max-width: none;
   margin: auto auto auto 0px;
+  -webkit-transform: translate(0px, -5px);
+  -ms-transform: translate(0px, -5px);
+  transform: translate(0px, -5px);
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -606,6 +614,17 @@ p {
   border-radius: 5px;
   background-color: #6057c3;
   color: #fff;
+}
+
+.nav-link.home {
+  display: block;
+  background-color: hsla(0, 0%, 67.5%, 0);
+  color: #000;
+}
+
+.nav-link.home:hover {
+  background-color: hsla(0, 0%, 100%, 0.57);
+  color: #000;
 }
 
 .nav-link.home.w--current {
@@ -750,7 +769,7 @@ p {
 }
 
 .flex-container.line {
-  margin: auto auto 2px;
+  margin: auto auto 5px;
   border-bottom: 2px solid #fff;
 }
 
@@ -1114,8 +1133,7 @@ p {
   display: flex;
   max-width: 1400px;
   margin: auto;
-  padding-top: 20px;
-  padding-bottom: 0px;
+  padding: 20px 10px 0px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -2408,6 +2426,10 @@ p {
   color: #fff;
 }
 
+.hero-overlay.bf {
+  margin: auto;
+}
+
 .hero-overlay.bj {
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url('../images/BlackJack3.PNG');
   background-image: linear-gradient(180deg, transparent, transparent), url('../images/BlackJack3.PNG');
@@ -2741,8 +2763,7 @@ p {
   width: 120px;
   height: 80px;
   max-width: none;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0px auto auto;
   text-align: left;
   -o-object-fit: contain;
   object-fit: contain;
@@ -2800,6 +2821,10 @@ p {
   padding: 0px;
 }
 
+.div-block-20.this {
+  margin-bottom: auto;
+}
+
 .div-block-21 {
   position: static;
   display: block;
@@ -2821,9 +2846,8 @@ p {
 }
 
 .div-block-22 {
-  margin-right: auto;
-  margin-left: auto;
-  padding: 20px;
+  margin: auto;
+  padding: 0px;
 }
 
 .heading-21 {
@@ -2982,7 +3006,9 @@ p {
   margin-right: auto;
   margin-bottom: 0px;
   margin-left: auto;
+  padding-right: 10px;
   padding-bottom: 20px;
+  padding-left: 10px;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -3218,6 +3244,10 @@ p {
 }
 
 .paragrahps {
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 0px;
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 16px;
 }
@@ -3397,11 +3427,11 @@ p {
   top: 0%;
   right: 0px;
   bottom: 0%;
-  overflow: visible;
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 360px;
   margin-right: auto;
   margin-left: auto;
+  padding-top: 10px;
   background-color: transparent;
   color: hsla(0, 0%, 100%, 0);
   text-align: center;
@@ -3530,6 +3560,11 @@ p {
   flex: 0 0 auto;
 }
 
+.paragraph-9 {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .link-block-9 {
   margin-right: auto;
   margin-bottom: 0px;
@@ -3574,6 +3609,12 @@ p {
 
   .nav-menu-2 {
     background-color: #000;
+  }
+
+  .logo {
+    -webkit-transform: translate(0px, -5px);
+    -ms-transform: translate(0px, -5px);
+    transform: translate(0px, -5px);
   }
 
   .section {
@@ -3628,6 +3669,11 @@ p {
     max-width: 100%;
   }
 
+  .lottie-animation-4 {
+    padding-top: 10px;
+    padding-bottom: 0px;
+  }
+
   .link-block-9 {
     margin-right: auto;
     margin-left: auto;
@@ -3637,6 +3683,7 @@ p {
 
 @media screen and (min-width: 1920px) {
   .hero.background-black {
+    margin: auto;
     background-color: #000;
   }
 
@@ -3667,6 +3714,8 @@ p {
   }
 
   .navbar-2 {
+    position: fixed;
+    top: auto;
     background-color: #d5d4d4;
     color: #000;
   }
@@ -3685,6 +3734,9 @@ p {
     -webkit-flex: 0 auto;
     -ms-flex: 0 auto;
     flex: 0 auto;
+    -webkit-transform: translate(0px, 5px);
+    -ms-transform: translate(0px, 5px);
+    transform: translate(0px, 5px);
     -o-object-fit: fill;
     object-fit: fill;
   }
@@ -3714,6 +3766,10 @@ p {
 
   .nav-link.button {
     overflow: visible;
+  }
+
+  .nav-link.home {
+    display: block;
   }
 
   .section {
@@ -3861,9 +3917,7 @@ p {
   }
 
   .sponsors.background-black {
-    padding-top: 20px;
-    border-top: 1px none #000;
-    background-color: #333;
+    padding-right: 0px;
   }
 
   .tabs {
@@ -4108,6 +4162,10 @@ p {
     background-position: 0px 0px, 50% 0%;
     background-size: auto, 700px;
     background-repeat: repeat, no-repeat;
+  }
+
+  .hero-overlay.bf {
+    margin: auto;
   }
 
   .hero-overlay.bj {
@@ -4368,12 +4426,11 @@ p {
     right: 0%;
     bottom: 0%;
     display: inline-block;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 440px;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 0px;
-    padding-left: 0px;
+    padding: 0px 0px 30px;
     text-align: center;
   }
 
@@ -4578,6 +4635,10 @@ p {
 
   .paragraph-11 {
     font-size: 16px;
+  }
+
+  .nav-link-6 {
+    display: block;
   }
 }
 
@@ -4931,6 +4992,10 @@ p {
     max-width: 621.9666748046875px;
   }
 
+  .lottie-animation-4 {
+    height: 370px;
+  }
+
   .link-block-9 {
     margin-right: auto;
     margin-bottom: -20px;
@@ -5023,11 +5088,12 @@ p {
   .logo {
     display: inline-block;
     width: 40%;
+    margin-right: auto;
     margin-left: auto;
     padding-left: 0px;
-    -webkit-transform: translate(0px, 25px) translate(70px, 0px) scale(1.4);
-    -ms-transform: translate(0px, 25px) translate(70px, 0px) scale(1.4);
-    transform: translate(0px, 25px) translate(70px, 0px) scale(1.4);
+    -webkit-transform: translate(0px, 25px) translate(70px, 0px) scale(1.3);
+    -ms-transform: translate(0px, 25px) translate(70px, 0px) scale(1.3);
+    transform: translate(0px, 25px) translate(70px, 0px) scale(1.3);
   }
 
   .menu-button {
@@ -5035,6 +5101,7 @@ p {
   }
 
   .container-4 {
+    margin-top: -41px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 20px;
@@ -5049,6 +5116,9 @@ p {
     position: static;
     display: inline-block;
     margin-left: auto;
+    -webkit-transform: translate(0px, 20px);
+    -ms-transform: translate(0px, 20px);
+    transform: translate(0px, 20px);
   }
 
   .div-block.div-block-01 {
@@ -5192,6 +5262,8 @@ p {
 
   .sponsors.background-black {
     margin: auto;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   .cta_buttons {
@@ -5471,6 +5543,10 @@ p {
     column-gap: 10px;
   }
 
+  .lottie-animation-4 {
+    padding-top: 15px;
+  }
+
   .tab-pane-tab-2-2 {
     margin-right: auto;
     margin-left: auto;
@@ -5653,16 +5729,19 @@ p {
 
   .text-block {
     max-width: 450px;
+    margin: auto;
+    font-size: 16px;
   }
 
   .logo {
     width: 150px;
-    -webkit-transform: translate(0px, 0px) translate(30px, 0px) scale(1.4);
-    -ms-transform: translate(0px, 0px) translate(30px, 0px) scale(1.4);
-    transform: translate(0px, 0px) translate(30px, 0px) scale(1.4);
+    -webkit-transform: translate(0px, -20px) translate(30px, 0px) scale(1.4);
+    -ms-transform: translate(0px, -20px) translate(30px, 0px) scale(1.4);
+    transform: translate(0px, -20px) translate(30px, 0px) scale(1.4);
   }
 
   .container-4 {
+    margin-top: 0px;
     padding-right: 10px;
     padding-left: 10px;
   }
@@ -5944,7 +6023,7 @@ p {
   }
 
   .form {
-    margin-top: 100px;
+    margin: auto;
   }
 
   .dark-paragraph {
@@ -6084,11 +6163,20 @@ p {
     width: 50px;
     height: auto;
     margin: auto;
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
   }
 
   .icon-image.icon-image1 {
     width: 20px;
     font-size: 10px;
+  }
+
+  .icon-image.this {
+    -webkit-transform: translate(62px, 0px);
+    -ms-transform: translate(62px, 0px);
+    transform: translate(62px, 0px);
   }
 
   .centered-container {
@@ -6291,10 +6379,12 @@ p {
 
   .lottie-animation-4 {
     width: 300px;
-    height: 500px;
+    height: 380px;
     max-height: none;
-    margin-top: 0px;
+    margin-top: 20px;
     margin-bottom: auto;
+    padding-right: 10px;
+    padding-left: 0px;
   }
 
   .tab-pane-tab-2-2 {
