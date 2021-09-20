@@ -537,7 +537,7 @@ p {
   top: 0%;
   right: 0%;
   bottom: auto;
-  background-color: #d3d3d3;
+  background-color: hsla(0, 0%, 82.7%, 0.9);
   box-shadow: 1px 1px 75px 0 rgba(0, 0, 0, 0.1);
   color: #4b4b4b;
 }
@@ -567,10 +567,16 @@ p {
   object-fit: cover;
 }
 
+.menu-button:hover {
+  background-color: hsla(0, 0%, 100%, 0.15);
+  color: #fff;
+}
+
 .container-4 {
   max-width: 1200px;
   padding-right: 30px;
   padding-left: 30px;
+  background-color: transparent;
 }
 
 .brand {
@@ -623,8 +629,8 @@ p {
 }
 
 .nav-link.home:hover {
-  background-color: hsla(0, 0%, 100%, 0.57);
-  color: #000;
+  background-color: hsla(0, 0%, 100%, 0.15);
+  color: #fff;
 }
 
 .nav-link.home.w--current {
@@ -3097,6 +3103,10 @@ p {
   object-fit: fill;
 }
 
+.div-block-25:hover {
+  background-color: hsla(0, 0%, 100%, 0.15);
+}
+
 .div-block-25.worksimage {
   background-image: url('../images/example4.JPG');
   background-position: 0px 0px;
@@ -3110,9 +3120,7 @@ p {
 
 .text-block-10 {
   display: block;
-  margin-top: 0px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: auto;
   padding-top: 0px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -3134,7 +3142,8 @@ p {
   -ms-flex-line-pack: center;
   align-content: center;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 8px;
   text-align: center;
 }
 
@@ -3176,6 +3185,7 @@ p {
   display: block;
   max-height: none;
   max-width: none;
+  background-color: transparent;
   text-decoration: none;
   -o-object-fit: cover;
   object-fit: cover;
@@ -3318,6 +3328,8 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin: auto;
+  padding-top: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -3348,6 +3360,7 @@ p {
 }
 
 .div-block-27.this {
+  margin-bottom: auto;
   padding-right: 10px;
   padding-left: 10px;
   text-align: left;
@@ -3718,6 +3731,10 @@ p {
     top: auto;
     background-color: #d5d4d4;
     color: #000;
+  }
+
+  .navbar-2:hover {
+    background-color: rgba(213, 212, 212, 0.9);
   }
 
   .logo {
@@ -4663,7 +4680,7 @@ p {
 
   .container.hero.blog.printestgrid {
     min-height: auto;
-    margin-bottom: 10px;
+    margin: auto;
   }
 
   .container.container__nomarginbottom.container__center {
@@ -4887,6 +4904,11 @@ p {
     margin-top: 10px;
   }
 
+  .container-6 {
+    margin: auto;
+    padding-top: 20px;
+  }
+
   .image-grid {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
@@ -4916,6 +4938,11 @@ p {
     -ms-flex-item-align: stretch;
     -ms-grid-row-align: stretch;
     align-self: stretch;
+  }
+
+  .gallery-thumbnail.sr {
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 
   .cards-grid-container {
@@ -5221,8 +5248,8 @@ p {
     max-width: none;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: auto auto auto auto;
-    grid-template-rows: auto auto auto auto;
+    -ms-grid-rows: auto auto auto;
+    grid-template-rows: auto auto auto;
   }
 
   .gallery-grid-container.grid-projects {
@@ -5522,6 +5549,7 @@ p {
   }
 
   .flex-container-grid {
+    display: block;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -5535,7 +5563,7 @@ p {
   }
 
   .div-block-27.this {
-    margin-bottom: 0px;
+    margin: auto;
   }
 
   .div-block-27.this._3d-works {
@@ -5672,7 +5700,7 @@ p {
 
   .container.hero.blog.printestgrid {
     min-height: auto;
-    margin-bottom: 10px;
+    margin: auto;
   }
 
   .container.container__center.footer {
@@ -5846,22 +5874,27 @@ p {
 
   .gallery-grid-container {
     position: static;
-    display: block;
+    display: -ms-grid;
+    display: grid;
     width: auto;
     height: auto;
     max-width: none;
     margin: auto;
-    padding-top: 2px;
+    padding-top: 5px;
+    padding-bottom: 0px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     justify-items: start;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: auto auto;
-    grid-template-rows: auto auto;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
     border-style: solid none none;
     border-width: 1px;
     border-color: #acacac #000 #000;
@@ -6145,8 +6178,13 @@ p {
     line-height: 40px;
   }
 
+  .heading-14 {
+    font-size: 22px;
+  }
+
   .container-6 {
     position: relative;
+    margin: auto;
     background-color: #333;
   }
 
@@ -6166,6 +6204,7 @@ p {
     -webkit-transform: translate(0px, 0px);
     -ms-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
+    text-decoration: none;
   }
 
   .icon-image.icon-image1 {
@@ -6366,8 +6405,16 @@ p {
     font-size: 12px;
   }
 
+  .flex-container-grid {
+    display: block;
+  }
+
+  .section-3 {
+    margin: auto;
+  }
+
   .div-block-27.this {
-    margin-bottom: 0px;
+    margin-bottom: auto;
   }
 
   .div-block-27.this._3d-works {
@@ -6406,7 +6453,7 @@ p {
 
   .link-block-11.w--current {
     display: inline-block;
-    margin: auto;
+    margin: auto 0px;
   }
 }
 
@@ -6713,15 +6760,15 @@ p {
   grid-row-start: 1;
 }
 
-#w-node-e7413b90-728a-ed6d-9771-3706fe59307d-4c96d62f {
-  -ms-grid-row: span 2;
-  grid-row-start: span 2;
-  -ms-grid-row-span: 2;
-  grid-row-end: span 2;
+#w-node-_45da1410-8881-88e6-f2db-b42b5b9b14f9-4c96d62f {
   -ms-grid-column: span 2;
   grid-column-start: span 2;
   -ms-grid-column-span: 2;
   grid-column-end: span 2;
+  -ms-grid-row: span 2;
+  grid-row-start: span 2;
+  -ms-grid-row-span: 2;
+  grid-row-end: span 2;
 }
 
 #w-node-_9c8c2145-8f7f-0d6b-6d02-561e7026ef65-4c96d62f {
@@ -7548,17 +7595,6 @@ p {
     align-self: start;
     -ms-grid-column-align: start;
     justify-self: start;
-  }
-
-  #w-node-e7413b90-728a-ed6d-9771-3706fe59307d-4c96d62f {
-    -ms-grid-row: span 1;
-    grid-row-start: span 1;
-    -ms-grid-row-span: 1;
-    grid-row-end: span 1;
-    -ms-grid-column: span 1;
-    grid-column-start: span 1;
-    -ms-grid-column-span: 1;
-    grid-column-end: span 1;
   }
 
   #w-node-e7413b90-728a-ed6d-9771-3706fe59307d-7a403666 {
