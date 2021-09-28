@@ -574,6 +574,7 @@ p {
 
 .container-4 {
   max-width: 1200px;
+  margin: auto;
   padding-right: 30px;
   padding-left: 30px;
   background-color: transparent;
@@ -644,6 +645,10 @@ p {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+.nav-link.home.works {
+  display: inline-block;
 }
 
 .section {
@@ -1097,8 +1102,14 @@ p {
 }
 
 .social-link {
-  margin-right: 10px;
-  margin-left: 10px;
+  margin: auto 5px;
+}
+
+.social-link:hover {
+  width: auto;
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 .image {
@@ -1225,6 +1236,8 @@ p {
 .gallery-grid-container.grid-projects {
   width: auto;
   max-width: none;
+  margin: auto;
+  padding-top: 20px;
   padding-right: 0px;
   padding-left: 0px;
   -webkit-box-pack: stretch;
@@ -1239,6 +1252,7 @@ p {
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  grid-auto-flow: row dense;
   grid-column-gap: 5px;
   grid-row-gap: 10px;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -1717,10 +1731,11 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: auto;
   height: 30px;
   max-height: none;
   max-width: none;
+  margin: auto;
   padding-bottom: 0px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -1737,8 +1752,8 @@ p {
   -ms-flex-line-pack: center;
   align-content: center;
   background-color: rgba(177, 129, 46, 0.8);
-  -o-object-fit: fill;
-  object-fit: fill;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .serviceslabel:hover {
@@ -1963,7 +1978,7 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 20px;
+  margin: 60px 20px 20px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2433,7 +2448,12 @@ p {
 }
 
 .hero-overlay.bf {
-  margin: auto;
+  max-height: 780px;
+  margin: 0px auto auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url('../images/The-Blind-Forest-game-Logo.png');
+  background-image: linear-gradient(180deg, transparent, transparent), url('../images/The-Blind-Forest-game-Logo.png');
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .hero-overlay.bj {
@@ -2635,8 +2655,21 @@ p {
 }
 
 .feature-image-mask {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   margin-right: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .feature-image-mask.spi {
@@ -3099,6 +3132,7 @@ p {
   bottom: auto;
   display: block;
   max-height: none;
+  margin: 0px;
   -o-object-fit: fill;
   object-fit: fill;
 }
@@ -3185,6 +3219,7 @@ p {
   display: block;
   max-height: none;
   max-width: none;
+  margin: auto;
   background-color: transparent;
   text-decoration: none;
   -o-object-fit: cover;
@@ -3192,12 +3227,18 @@ p {
 }
 
 .image-15 {
-  width: 400px;
+  width: auto;
   height: 255px;
-  max-height: 88%;
+  max-height: none;
   max-width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.image-15:hover {
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .image-15.bj {
@@ -3260,6 +3301,7 @@ p {
   padding-top: 0px;
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 16px;
+  text-align: left;
 }
 
 .flex-container-grid {
@@ -3615,6 +3657,158 @@ p {
   justify-content: flex-start;
 }
 
+.sticky-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: auto;
+  z-index: 1;
+  margin: auto;
+  padding: 0px;
+  background-color: #f4f4f4;
+}
+
+.nav-grid {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  margin: auto;
+  padding: 0px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  -ms-grid-columns: 1fr -webkit-max-content -webkit-max-content -webkit-max-content;
+  -ms-grid-columns: 1fr max-content max-content max-content;
+  grid-template-columns: 1fr -webkit-max-content -webkit-max-content -webkit-max-content;
+  grid-template-columns: 1fr max-content max-content max-content;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+
+.nav-logo-link {
+  display: block;
+  height: 60px;
+  margin: auto;
+  padding: 0px 80px 0px 0px;
+  -webkit-transform: translate(-120px, 0px);
+  -ms-transform: translate(-120px, 0px);
+  transform: translate(-120px, 0px);
+}
+
+.nav-logo {
+  width: auto;
+  height: 100%;
+  margin: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: 0% 50%;
+  object-position: 0% 50%;
+}
+
+.nav-link-7 {
+  display: inline-block;
+  margin: auto;
+  padding: 20px;
+  color: #444;
+  text-decoration: none;
+}
+
+.nav-link-7:hover {
+  text-decoration: underline;
+}
+
+.list-item {
+  margin: auto;
+}
+
+.nav-menu-3 {
+  display: block;
+}
+
+.container-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar-3 {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  margin: auto;
+  background-color: hsla(0, 0%, 86.7%, 0.84);
+}
+
+.heading-curses {
+  margin-top: 60px;
+}
+
+.flex-container-grid-curse {
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  grid-auto-flow: row;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  grid-template-areas: ".";
+  -ms-grid-columns: 1fr 5px 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  background-clip: border-box;
+  -webkit-text-fill-color: inherit;
+}
+
+.heading-26-curse {
+  margin-bottom: 2px;
+  font-size: 26px;
+  text-decoration: underline;
+}
+
+.video {
+  top: 10px;
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
 @media screen and (min-width: 1440px) {
   .navbar {
     background-color: #000;
@@ -3659,8 +3853,17 @@ p {
     background-color: hsla(0, 0%, 67.6%, 0.9);
   }
 
+  .hero-overlay.bf {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url('../images/The-Blind-Forest-game-Logo.png');
+    background-image: linear-gradient(180deg, transparent, transparent), url('../images/The-Blind-Forest-game-Logo.png');
+  }
+
   .div-block-20.this {
     position: static;
+  }
+
+  .div-block-25 {
+    display: block;
   }
 
   .text-block-10 {
@@ -3728,7 +3931,7 @@ p {
 
   .navbar-2 {
     position: fixed;
-    top: auto;
+    top: 0px;
     background-color: #d5d4d4;
     color: #000;
   }
@@ -3912,6 +4115,11 @@ p {
   .gallery-grid-container.gallery-grid-container01 {
     -ms-grid-rows: auto auto auto auto auto;
     grid-template-rows: auto auto auto auto auto;
+  }
+
+  .gallery-grid-container.grid-projects {
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
   }
 
   .heading-experience {
@@ -4182,7 +4390,12 @@ p {
   }
 
   .hero-overlay.bf {
+    max-height: 310px;
     margin: auto;
+    background-image: url('../images/The-Blind-Forest-game-Logo.png');
+    background-position: 50% 0%;
+    background-size: 700px;
+    background-repeat: no-repeat;
   }
 
   .hero-overlay.bj {
@@ -4369,6 +4582,7 @@ p {
   }
 
   .div-block-25 {
+    margin: auto;
     text-align: left;
   }
 
@@ -4396,8 +4610,21 @@ p {
     font-size: 24px;
   }
 
+  .link-block-6 {
+    margin: auto;
+  }
+
   .image-15 {
-    height: 255px;
+    display: block;
+    width: auto;
+    height: 295px;
+    margin: 0px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .image-15.test {
+    width: auto;
   }
 
   .section-3 {
@@ -4657,6 +4884,16 @@ p {
   .nav-link-6 {
     display: block;
   }
+
+  .nav-logo {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+
+  .heading-curses {
+    margin-top: 0px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -4763,6 +5000,10 @@ p {
     border-radius: 0px;
     background-color: #fff;
     color: #000;
+  }
+
+  .nav-link.home.works {
+    display: block;
   }
 
   .div-block.div-block-01 {
@@ -4933,6 +5174,17 @@ p {
     margin-bottom: auto;
   }
 
+  .hero-overlay.bf {
+    height: 90vh;
+    max-height: 310px;
+    background-image: url('../images/The-Blind-Forest-game-Logo.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+
   .gallery-grid-container-2 {
     -webkit-align-self: stretch;
     -ms-flex-item-align: stretch;
@@ -5034,6 +5286,18 @@ p {
     margin-left: auto;
     padding-right: 10px;
     padding-left: 10px;
+  }
+
+  .nav-menu-3.w--open {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -5428,6 +5692,10 @@ p {
     grid-template-rows: auto auto auto auto;
   }
 
+  .gallery-thumbnail {
+    max-height: none;
+  }
+
   .feature-section {
     padding: 40px 20px;
   }
@@ -5550,6 +5818,8 @@ p {
 
   .flex-container-grid {
     display: block;
+    padding-right: 10px;
+    padding-left: 10px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -5612,6 +5882,25 @@ p {
     margin-right: auto;
     margin-bottom: -20px;
     margin-left: auto;
+  }
+
+  .sticky-nav {
+    position: relative;
+  }
+
+  .nav-grid {
+    text-align: center;
+  }
+
+  .flex-container-grid-curse {
+    display: block;
+    padding-right: 10px;
+    padding-left: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -5762,10 +6051,12 @@ p {
   }
 
   .logo {
+    display: block;
     width: 150px;
-    -webkit-transform: translate(0px, -20px) translate(30px, 0px) scale(1.4);
-    -ms-transform: translate(0px, -20px) translate(30px, 0px) scale(1.4);
-    transform: translate(0px, -20px) translate(30px, 0px) scale(1.4);
+    border-radius: 8px;
+    -webkit-transform: translate(0px, -25px) translate(30px, 0px) scale(1.4);
+    -ms-transform: translate(0px, -25px) translate(30px, 0px) scale(1.4);
+    transform: translate(0px, -25px) translate(30px, 0px) scale(1.4);
   }
 
   .container-4 {
@@ -6226,6 +6517,11 @@ p {
     text-align: left;
   }
 
+  .hero-overlay.bf {
+    width: auto;
+    height: auto;
+  }
+
   .centered-container-3 {
     padding-right: 20px;
     padding-left: 20px;
@@ -6407,6 +6703,8 @@ p {
 
   .flex-container-grid {
     display: block;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   .section-3 {
@@ -6454,6 +6752,36 @@ p {
   .link-block-11.w--current {
     display: inline-block;
     margin: auto 0px;
+  }
+
+  .sticky-nav {
+    padding: 0px;
+  }
+
+  .nav-grid {
+    grid-auto-flow: row;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 100px;
+    grid-template-rows: 100px;
+  }
+
+  .nav-logo-link {
+    border-top: 1px solid #c4c4c4;
+  }
+
+  .nav-link-7 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #c4c4c4;
+  }
+
+  .flex-container-grid-curse {
+    display: block;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 
@@ -7264,6 +7592,52 @@ p {
   grid-column-end: 2;
   -ms-grid-column: 1;
   grid-column-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+}
+
+#w-node-_9c8c2145-8f7f-0d6b-6d02-561e7026ef65-5bdc2eee {
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-align: start;
+  align-self: start;
+}
+
+#w-node-_9c8c2145-8f7f-0d6b-6d02-561e7026ef67-5bdc2eee {
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+}
+
+#w-node-eff26eb7-643a-6635-9bd3-dc7d7a457d6e-5bdc2eee {
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+}
+
+#w-node-eff26eb7-643a-6635-9bd3-dc7d7a457d70-5bdc2eee {
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
+  -ms-grid-column: 2;
+  grid-column-start: 2;
   -ms-grid-row-span: 1;
   grid-row-end: 2;
   -ms-grid-row: 1;
