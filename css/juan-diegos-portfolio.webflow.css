@@ -649,6 +649,12 @@ p {
 
 .nav-link.home.works {
   display: inline-block;
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .section {
@@ -3739,6 +3745,7 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin: auto;
 }
 
 .navbar-3 {
