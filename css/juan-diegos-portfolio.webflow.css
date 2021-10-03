@@ -4223,6 +4223,12 @@ p {
   object-fit: fill;
 }
 
+.rich-text-block-5.blog.curses.heading-curses {
+  line-height: 1;
+  font-weight: 400;
+  white-space: normal;
+}
+
 .rich-text-block-5.curses {
   white-space: normal;
 }
@@ -4447,6 +4453,11 @@ p {
   -ms-grid-rows: auto auto auto;
   grid-template-rows: auto auto auto;
   text-align: left;
+}
+
+.rich-text-curses {
+  font-size: 18px;
+  line-height: 1;
 }
 
 @media screen and (min-width: 1440px) {
