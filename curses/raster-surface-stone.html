@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Sun Oct 03 2021 19:01:34 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Sun Oct 03 2021 19:11:27 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="61591c295b3a22b24e4b5e14" data-wf-site="602f42d4d0eb6ddf9136273c">
 <head>
   <meta charset="utf-8">
@@ -138,26 +138,7 @@
         <p>  &gt; clamps a value between 0 and 1 </p>
         <p>vec3_length</p>
         <p>  &gt; computes the vectors length </p>
-        <p>Here are some important values for your lights before we begin the lighting routine.   </p>
-        <p>Directional Light: direction = -0.577, -0.577, 0.577; color = 0xFFC0C0F0 </p>
-        <p>Point Light: pos = -1, 0.5, 1;  color = 0xFFFFFF00 </p>
-        <p>In order to do lighting we will accomplish this in the vertex shader.  We will do per-vertex lighting and store the current lighting color in the vertex’s color data member.  In the vertex shader you will transform the vertex’s position and normal into world space by multiplying them by the world matrix.</p>
-      </div>
-      <div class="rich-text-block-5 blog curses heading-curses w-richtext">
-        <p>dot_product </p>
-        <p> &gt; dot product between two vectors with x,y,z components </p>
-        <p>cross_product </p>
-        <p>  &gt; cross product between two vectors with x,y,z components </p>
-        <p>vec3_normalize </p>
-        <p>  &gt; normalize a vector with x,y,z components </p>
-        <p>combine_colors </p>
-        <p>  &gt; additively combine two colors </p>
-        <p>modulate_colors </p>
-        <p>  &gt; multiplicatively combine two colors </p>
-        <p>saturate </p>
-        <p>  &gt; clamps a value between 0 and 1 </p>
-        <p>vec3_length</p>
-        <p>  &gt; computes the vectors length </p>
+        <p>‍</p>
         <p>Here are some important values for your lights before we begin the lighting routine.   </p>
         <p>Directional Light: direction = -0.577, -0.577, 0.577; color = 0xFFC0C0F0 </p>
         <p>Point Light: pos = -1, 0.5, 1;  color = 0xFFFFFF00 </p>
@@ -174,11 +155,13 @@
         <p>A result of ZERO indicates the two vectors are perpendicular to one another. </p>
         <p>A result of 1 or -1 indicates the two vectors are PARALLEL to each other. </p>
         <p>It is often important to NORMALIZE vectors before calculating the Dot Product. </p>
+        <p>‍</p>
         <p><strong>The Cross Product</strong> </p>
         <p>Given two 3D vectors of any length, the cross product can be used to solve a third vector that will be PERPENDICULAR to both. </p>
         <p>Notice that any two non-equivalent 3D vectors will form a plane. </p>
         <p>The Cross-Product can be used to find the GRADIENT of that plane. </p>
         <p>Both the cross product &amp; dot product will come in handy when we start to look at how light should interact with our surfaces. </p>
+        <p>‍</p>
         <p><strong>Optimization: Back-face Culling</strong> </p>
         <ul role="list">
           <li>The Cross Product can be used to determine which side of a triangle is facing the screen. </li>
@@ -188,27 +171,32 @@
           <li>You can then order a triangle’s vertices in a consistent fashion based on which way you wish to see them. Either “clockwise” or “counter-clockwise”. (This is known as polygon “winding”) </li>
           <li>By ignoring “Back-facing” triangles during rasterization you can boost drawing speed.     </li>
         </ul>
+        <p>‍</p>
         <p><strong>Back-face Culling</strong> </p>
         <p>By winding all of our triangles based on the direction we wish to see them, it becomes possible to detect which side we are looking at using the cross product. </p>
         <p>By ignoring “hidden” triangles (such as on the opposite facing side of this cube) we can dramatically decrease time spent rasterizing surfaces that will be obscured anyway. </p>
         <p>You can add this check with only a few lines extra lines of code at the top of your triangle drawing routine. </p>
+        <p>‍</p>
         <p><strong>What is a “Normal”?</strong> </p>
         <p>Remember the “Gradient” from lesson 2? It was a 2D vector perpendicular to the direction of a line. </p>
         <p>In a similar fashion a “Normal” is a 3D vector perpendicular to the surface of a plane. </p>
         <p>In both cases each one represents whichever direction is considered “Up” relative to that primitive. </p>
         <p>Unlike the gradient however, which can be any length. A normal is meant to be “unit length” which indicates it has a magnitude of one. </p>
         <p>A triangle’s normal can be found easily by using the cross product and then “normalizing” the resulting 3D vector. </p>
-        <p> To normalize a vector simply divide each component (xyz) by the current length of the vector. </p>
+        <p>To normalize a vector simply divide each component (xyz) by the current length of the vector. </p>
+        <p>‍</p>
         <p><strong>Face Normals</strong> </p>
         <p>These are the “true” normals of each primitive in a given mesh. They are calculated as previously shown. </p>
         <p>Each vertex assigned to the primitive shares this same exact normal. </p>
         <p>As you will see, normals may be used to estimate how much light a surface should receive. </p>
         <p>When used to shade a surface, they create a very “faceted” appearance, since each normal reflects the true surface geometry underneath.   </p>
+        <p>‍</p>
         <p><strong>Vertex Normals</strong> </p>
         <p>Unlike face normals, vertex normals are stored independently for each vertex. </p>
         <p>Because of this, vertices on a single primitive can actually be different from one another. </p>
         <p>By averaging face normals between overlapping vertices, we can simulate smoother surfaces than we actually have access to. </p>
         <p>This comes in handy when shading surfaces that are supposed to be more smooth or organic in nature.   </p>
+        <p>‍</p>
         <p><strong>What is Light?</strong> </p>
         <ul role="list">
           <li>Visible light only makes up a tiny portion of the electromagnetic spectrum. </li>
@@ -218,6 +206,7 @@
           <li>A vehicle is perceived as blue because it’s paint absorbs more red &amp; green wavelength photons. This is also why a black car gets hotter in the sun than a white car. </li>
           <li>The microscopic geometry of the surface or its “roughness” also impacts on how light interacts with it. But more on that later…  </li>
         </ul>
+        <p>‍</p>
         <p><strong>Problems with simulating actual photons</strong> </p>
         <ul role="list">
           <li>On a sunny day approximately 2.9x1014 photons of visible light strike one square inch in the span of a single second. </li>
@@ -226,16 +215,19 @@
           <li>Another problem is that our triangles are perfectly flat. Even the smoothest surfaces you encounter day to day are not perfectly flat at the microscopic level! </li>
           <li>To simulate light in real-time we will have to take some pretty massive shortcuts. Thankfully there are a number of ways to “approximate” these surface interactions. </li>
         </ul>
+        <p>‍</p>
         <p><strong>Lambertian Reflectance</strong> </p>
         <p>his refection model is a simple way to approximate the behavior of a perfectly “lambertian” surface. </p>
         <p>A lambertian surface, is a material that absorbs and then randomly scatters all outgoing light rays. (perfect diffusion) </p>
         <p>A point on this surface appears to be the same luminance regardless of the angle of the observer.  </p>
         <p>This is fair approximation of the behavior of very rough or “matte” surfaces such as wood or unpainted dry clay.    </p>
-        <p>Specular Reflectance </p>
+        <p>‍</p>
+        <p><strong>Specular Reflectance </strong></p>
         <p>Unlike lambertian reflectance, specular reflectance is designed to mimic photons bouncing off of the material’s surface before being absorbed &amp; emitted. </p>
         <p>This is an effective model for producing the various “highlights” on shiny surfaces. </p>
         <p>Generally most visual surfaces can be represented using some combination of lambetinan &amp; specular reflectance. </p>
         <p>There are of course some exceptions to this however… </p>
+        <p>‍</p>
         <p><strong>Basic Types of Light Sources</strong> </p>
         <ul role="list">
           <li>Directional Light </li>
@@ -261,6 +253,7 @@
         <ul role="list">
           <li>Used to model the “indirect” lighting within a scene. In it’s most basic form simply a flat term added to all surfaces to simulate all the randomly scattered photons bouncing off of surfaces. </li>
         </ul>
+        <p>‍</p>
         <p><strong>Directional Light Formula</strong> </p>
         <p><strong>LIGHTRATIO = CLAMP( DOT(         -LIGHTDIR, SURFACENORMAL ) )</strong> </p>
         <p><strong>RESULT = LIGHTRATIO * LIGHTCOLOR * SURFACECOLOR</strong> </p>
@@ -335,6 +328,7 @@
         <ul role="list">
           <li>Use the interpolated light information within the Pixel Shader to shade the surface by multiplying the light hitting the surface by the original surface color. (Modulation) </li>
         </ul>
+        <p>‍</p>
         <p><strong>Adding Per-Pixel Lighting (Phong Shading)</strong> </p>
         <ul role="list">
           <li>Step 1 &amp; 2: </li>
@@ -366,6 +360,7 @@
         <ul role="list">
           <li>At this point you know the actual position &amp; normal of each individual pixel! Compute the lighting results just like you would in the vertex shader but now with significantly more accuracy! </li>
         </ul>
+        <p>‍</p>
         <p><strong>Physically Based Rendering</strong> </p>
         <p>Modern real-time computer graphics has started to embrace more physically accurate light transport models such as Cook-Torrence. </p>
         <p>Unlike models such as Blinn-Phong which are approximations based on observation, these computations are based on physical material properties and how they actually interact with light. (Dielectrics &amp; Metals) </p>
