@@ -818,6 +818,10 @@ p {
   border-radius: 0px;
 }
 
+.flex-container.line.curses {
+  margin-bottom: 5px;
+}
+
 .hero-image-mask {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6072,6 +6076,13 @@ p {
     margin-top: auto;
   }
 
+  .dropdown-2 {
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
   .div-block-36 {
     width: auto;
     height: auto;
@@ -7686,6 +7697,11 @@ p {
     padding-right: 10px;
     padding-left: 10px;
     text-align: left;
+  }
+
+  .dropdown-2 {
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .serviceslabel-2 {
