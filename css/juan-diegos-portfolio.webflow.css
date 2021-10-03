@@ -4209,6 +4209,20 @@ p {
   white-space: normal;
 }
 
+.rich-text-block-5.blog.curses {
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-indent: 0px;
+  -webkit-column-count: 0;
+  column-count: 0;
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+
+.rich-text-block-5.curses {
+  white-space: normal;
+}
+
 .dropdown-2 {
   display: block;
   max-width: 950px;
@@ -4255,6 +4269,7 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-bottom: 10px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
