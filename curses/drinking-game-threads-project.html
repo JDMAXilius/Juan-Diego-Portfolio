@@ -1,11 +1,11 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Fri Oct 15 2021 16:30:38 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="6159166e9c27780f46623810" data-wf-site="602f42d4d0eb6ddf9136273c">
+<html data-wf-page="61611639fe040cb1efe81a0d" data-wf-site="602f42d4d0eb6ddf9136273c">
 <head>
   <meta charset="utf-8">
-  <title>RasterSurface Texture Array</title>
-  <meta content="RasterSurface Texture Array" property="og:title">
-  <meta content="RasterSurface Texture Array" property="twitter:title">
+  <title>Drinking Game Threads Project</title>
+  <meta content="Drinking Game Threads Project" property="og:title">
+  <meta content="Drinking Game Threads Project" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="../css/normalize.css" rel="stylesheet" type="text/css">
@@ -33,32 +33,24 @@
   </div>
   <div class="section background-black curses wf-section">
     <div class="centered-container-7 this w-container">
-      <h1 class="heading-curses this">Raster Surface Texture Array</h1>
-      <p class="paragraph-5 curses">This project is about the process of directly manipulating the color array by inserting color values into specific spots in the array<br></p>
+      <h1 class="heading-curses this">Drinking Game Threads Project</h1>
+      <p class="paragraph-5 curses">This project is about the process of implement the &#x27;Starting gun&#x27; and &#x27;Shutting down&#x27; logic for detached threads.<br></p>
     </div>
     <div class="div-block-32 dl curses">
       <div class="text-block-11">Feel Free to Download the Source Code.</div>
-      <a href="https://github.com/JDMAXilius/Raster-Surface-Texture-Array.git" target="_blank" class="button-6 ds w-button">Source Code</a>
+      <a href="https://github.com/JDMAXilius/Drinking-Game-Threads-Project.git" target="_blank" class="button-6 ds w-button">Source Code</a>
     </div>
     <div class="container-7 w-container">
       <h2 class="heading-26-curse-2"><strong>Project Topics</strong></h2>
-      <p class="paragrahps-2 blog colum curses"><strong>Explanations<br>‍</strong>Vector Displays <br>Raster Displays<br>Alpha<br>Pixel Intensity &amp; Gamma <br>Pixel Formats <br>RGB<br>Blending Pixels<br>BLIT Routine<br><strong>Code</strong><br>Raster Surface <br>Helper Functions <br>Animation<br>‍<br><strong><br><br><br><br></strong></p>
+      <p class="paragrahps-2 blog colum curses"><span class="text-span-3"><strong>Explanations</strong></span><strong><br></strong>Synchronization<br>Deadlocks<br>Thread Types<br>Mutex<br>Condition Variables<br>Synchronization Primitives<br>Deadlocks<br><br><br>‍<br><strong><br><br><br><br></strong></p>
     </div>
     <section id="Features" class="flex-container line curses w-container">
       <h2 class="heading-18"><strong>Objectives</strong></h2>
     </section>
-    <div class="div-block-34 curses"><img src="../images/Raster-Surface-Texture-Array.PNG" loading="lazy" alt="image" class="image-19 curses"></div>
+    <div class="div-block-34 curses"><img src="../images/2847-parent__14215.1551751220.jpg" loading="lazy" sizes="(max-width: 1439px) 30vw, 25vw" srcset="../images/2847-parent__14215.1551751220-p-800.jpeg 800w, ../images/2847-parent__14215.1551751220-p-1080.jpeg 1080w, ../images/2847-parent__14215.1551751220.jpg 1280w" alt="image" class="image-19 curses"></div>
     <div class="container-7 w-container">
       <div class="rich-text-block-5 curses heading-curses w-richtext">
-        <p>Get a tiled background showing on the entire color array</p>
-        <p>o  The color values will be strange but this is fine for this section.</p>
-        <p>Swap the color bits from BGRA to <strong>ARGB</strong> and get 10 random objects in the color array.</p>
-        <p>o  Some bit manipulation will be needed in order to fix the colors</p>
-        <p>o  If you were able to get this far, you should be able to draw 10 random “tiled” objects onto the color array as well.</p>
-        <p>Get at least 1 “cell” of an animation rendering properly with blending.  Ensurethat the cell properly blends with what is behind it.</p>
-        <p>o  Depending on the alpha value of the cell, some form of interpolation will be needed to handle properly blending the background with the cell.</p>
-        <p>Play an animation with a high speed timer (The X Time class is great for this)</p>
-        <p>o  A minimum of 30 frames a second playing for the animation.</p>
+        <p>When dealing with threads and the need to access multiple mutex-protected resources, there is the possibility for “deadlock” to occur. Deadlock (sometimes called “deadly embrace”) is a situation where two or more competing actions are waiting for the other to finish, and thus neither ever does. To illustrate this, we are going to write code to run a drinking game.</p>
       </div>
     </div>
     <section id="Code" class="flex-container line curses w-container">
@@ -102,20 +94,10 @@
     </section>
     <div class="container-7 curses w-container">
       <div class="rich-text-curses w-richtext">
-        <p>1. Once you setup the rendering loop, it is time to start drawing a pixel.  Call your function that draws a pixel and make sure it is drawing in the correct location. Contrasting colors are best to test with.</p>
-        <p>2. Now that you can draw a pixel, we should now attempt to draw a tile (square set of pixels) or BLIT an image.</p>
-        <p>a. For the tile’s height</p>
-        <p>i. For the tile’s width</p>
-        <p>1. Find the location into the image array. (2D to1D)</p>
-        <p>2. Draw a pixel at this location iterating through the width and the height</p>
-        <p>3. Once you are able to draw a BLIT / tiled image,we need to fill our color buffer with the same image.  You are essentially going to repeat this BLIT horizontally and vertically as well.</p>
-        <p>a. For the number of evenly divisible tile heights</p>
-        <p>i. For the number of evenly divisible tile widths</p>
-        <p>1. Call your function to draw a tile.</p>
-        <p>4. At this point you should notice a border around the edge of your right and bottom side of the screen.  This is because the remaining pixels did not constitute enough space to draw another BLIT. What needs to be done to your draw function to adjust for this?</p>
-        <p>5. Getting this far you should have a strong understanding on how to BLIT.  Place 10BLITs randomly placed throughout the color buffer.  These can be anything of your choosing.  Obvious choices would be something large enough to notice.</p>
-        <p>6. Now let us introduce 1 “cell” of an animation.  Be careful here because this is where you need to interpolate through color values since the animation might have alpha values lower than 255.</p>
-        <p>7. As soon as you can get a properly rendering BLIT with alpha transparency, solve how to iterate through the animation overtime.  Make sure the animation plays smoothly at 30 fps.</p>
+        <p> Usage: DrinkingGame drinkerCount bottleCount openerCount<br>            <br>Arguments:<br>                       drinker Count                           Number of drinkers.<br>                       bottle Count                             Number of bottles.<br>                       opener Count                           Number of openers.<br>          </p>
+        <p>The drinking game consists of Drinkers, Bottles, and Bottle Openers. During the gameplay drinkers will be constantly trying to drink, which consists of acquiring a bottle and an opener resource. Once a drinker is able to successfully acquire both resources it will  take a drink, sleep for a while, then release both resources so another drinker can use them.</p>
+        <p>When trying to get the resources one of two things may happen: the drinker acquires both resources or the drinker fails to get any resources. Each resource has a mutex that determines if it&#x27;s currently in use - if it&#x27;s locked then it&#x27;s being used by a drinker. The drinker will randomly pick a bottle or an opener as its first resource and lock it. Once the drinker has the first resource it will need to look through the entire pool of resources for the second resource. If the drinker had a bottle as the first resource then it will need to look for an unused opener. It is possible that the          drinker cannot find the second resource - in this case the drinker has failed to get both resources.</p>
+        <p>‍</p>
       </div>
     </div>
     <section id="Features" class="flex-container line curses w-container">
@@ -123,92 +105,26 @@
     </section>
     <div class="container-7 w-container">
       <div class="rich-text-block-5 curses heading-curses w-richtext">
-        <p><strong>Vector Displays </strong></p>
-        <p>A type of CRT (cathode ray tube), a vector display would draw lines onto a screen by illuminating the embedded phosphor with it’s electron gun.  </p>
-        <p>Since vector displays drew lines directly they did not use pixels as we know them today. </p>
-        <p>Many early arcade game from the late 70s to mid 80s preferred the vector display since it allowed for higher detail than equivalent raster displays of the time. </p>
-        <p> </p>
-        <p><strong>Raster Displays </strong></p>
-        <p>Although early raster displays also used a CRT, they differed in execution. </p>
-        <p>A raster display is made up of a grid (the raster) of picture-elements (pixels) where each pixel can be triggered to emit light. Resolution describes the horizontal and vertical number of pixels. </p>
-        <p>Though we now use other technologies such as liquid crystal display (LCD) in our displays, the concept of the raster and pixel has stayed with us to this day.   </p>
-        <p> </p>
-        <p><strong>What About Alpha? </strong></p>
-        <ul role="list">
-          <li>Alpha is NOT part of the physical display. </li>
-          <li>We use Alpha data as a kind of extra information to influence our final RGB results in some way. </li>
-          <li>It’s often up to us (software engineers) on how we use Alpha, however there are certainly some common case uses for it.  </li>
-          <li>One such use is mathematically blending the intensity of two overlapping pixels using the source, destination or some combination of the two values.   </li>
-        </ul>
-        <p>‍</p>
-        <p><strong>Pixel Intensity &amp; Gamma </strong></p>
-        <ul role="list">
-          <li>All modern displays can output up to 255 levels of intensity per color channel. We can store color in many different ways, but this is what the monitor can show. </li>
-          <li>However… the human perception of this intensity is NOT linear. </li>
-          <li>This why we use something called “gamma correction”, it adjusts this linear intensity range into something more appropriate for human vision. </li>
-          <li>Most image formats stored on your hard-drive are stored with the expectation that your display has a gamma ramp of about 2.2. </li>
-        </ul>
-        <ul role="list">
-          <li>Pixels retrieved from such an image have been pre-multiplied to compensate for this. </li>
-        </ul>
-        <p> </p>
-        <p><strong>Pixel Formats</strong> </p>
-        <ul role="list">
-          <li>Pixels can be represented internally in LOTS of different ways: </li>
-        </ul>
-        <ul role="list">
-          <li>R8G8B8 UINT, R32B32G32A32 FLOAT, B4G4R4 USHORT and on and on…  </li>
-          <li>4Byte colors are very common (ex: X8B8G8R8) since they align well in memory. </li>
-          <li>Converting between formats is a very common requirement. </li>
-        </ul>
-        <ul role="list">
-          <li>The actual formats supported by display hardware will be the fastest to transfer since they will not require conversion.   </li>
-        </ul>
-        <p> </p>
-        <p><strong>Working with R8G8B8A8 Pixels </strong></p>
-        <h4>0xFF0000FF | 0x00FF00FF | 0x0000FFFF </h4>
-        <h4>0xFFFF00FF | 0x00FFFFFF </h4>
-        <h4>0xFFFFFFFF </h4>
-        <h4>Extracting a Single 8bit Channel </h4>
-        <h4>0x1F4C1FA2 &amp; 0x00FF0000 </h4>
-        <h4>0x004C0000 </h4>
-        <h4>&gt;&gt; </h4>
-        <h4>Gbyte == 0x4C </h4>
-        <p>‍</p>
-        <p><strong>Blending Pixels Based On Alpha </strong></p>
-        <ul role="list">
-          <li>One of the most common ways to use an alpha value, is as a threshold of how much to linearly interpolate between the intensities of 2 pixels. </li>
-        </ul>
-        <ul role="list">
-          <li>Step 1: Break each pixel into its raw channels as described previously. </li>
-          <li>Step 2: Use source pixel’s alpha intensity to determine how much of the destination pixel’s RGB channels should be blended in. </li>
-          <li>Step 3: Use the linear interpolation formula to merge each of the channels into a final result to be displayed. </li>
-        </ul>
-        <ul role="list">
-          <li>The lerp formula: ( B - A ) * R + A </li>
-        </ul>
-        <ul role="list">
-          <li>Where <strong>A</strong> is the starting value and <strong>B</strong> is the ending value and <strong>R</strong> is a ratio from 0 to 1 describing the amount of transition desired. </li>
-          <li><em>HINT:</em> If <strong>R</strong> is derived from Alpha then it may not be from 0-1 , you will need to adjust for this. </li>
-        </ul>
-        <p> </p>
-        <p><strong>How many REAL 2D games have you played? </strong></p>
-        <ul role="list">
-          <li>Nearly every modern 2D game is drawn using a 3D Hardware accelerated rendering API like OpenGL or Direct3D. </li>
-          <li>This means your “Sprites” are actually 2 flat triangles covered with a texture image funneled through a fully 3D capable rendering system. </li>
-          <li>Modern 2D games/libraries do this because it allows them to take advantage of the GPU (graphics processing unit) and draw far more “Sprites” than they otherwise would be able to. </li>
-          <li>Older pure 2D systems would use something called a “Blitter“ chip to efficiently transfer image data from one memory area to another. </li>
-        </ul>
-        <p> </p>
-        <p><strong>Sample Arguments for a BLIT Routine </strong></p>
-        <ul role="list">
-          <li>Pointer to Source Image Array (Pixels) </li>
-          <li>Pointer to Destination Screen Array (Pixels) </li>
-          <li>Source Image Array Dimensions (Width &amp; Height) </li>
-          <li>Destination Screen Array Dimensions (Width &amp; Height) </li>
-          <li>Source Image Sub-Rectangle to be Copied (ex: Left Top Right Bottom) </li>
-          <li>Destination Copy-To Location X &amp; Y (Drawing Position) </li>
-        </ul>
+        <p><strong>Synchronization</strong></p>
+        <p>Insure that events in multiple threads always occur in the <br>correct  order <br>Allow the safe sharing of data between threads <br>Beware of overuse of synchronization</p>
+        <p><strong>Thread Types</strong></p>
+        <p>Joinable – All spawned threads begin as joinable, they need to be declared <br>as detached or Joined.  Once declared they can not be changed.</p>
+        <p>‍<br>Joined – A thread that has been declared as joined has a relationship with <br>the thread that contains the join. The thread with the join will wait at the <br>place where the join appears for the joined thread to complete before <br>moving on</p>
+        <p>‍<br>Detached - Detached threads are mostly independent of the thread that <br>spawns them<br><br>If you omit this call, the result is undefined</p>
+        <p>Threads may be scheduled by the system scheduler (OS) or by a scheduler in the thread library (depending on the threading model).  </p>
+        <p><strong>The scheduler in the thread library:</strong></p>
+        <p>&gt;will preempt currently running threads on the basis of priority<br>&gt;does NOT time-slice (i.e., is not fair).  A running thread will continue to run forever unless:<br>o a thread call is made into the thread library<br>o a blocking call is made<br>o the running thread calls sched_yield()</p>
+        <p>Managing Dependencies and Protecting Critical Sections</p>
+        <p>Mutexes<br>Condition Variables<br>Reader/Writer Locks<br>Semaphores<br>Barriers</p>
+        <p>A Mutex (Mutual Exclusion) is a data element that allowsmultiple threads to synchronize their access to sharedresources. It is a lockable object that is designed tosignal when critical sections of code need exclusiveaccess, preventing other threads with the sameprotection from executing concurrently and access thesame memory locations.<br>Like a binary semaphore, a mutex has two states, locked and unlocked</p>
+        <p>Only one thread can lock a mutex<br>Once a mutex is locked, other threads will block when they try to lock the same mutex, until the locking mutex unlocks the mutex, at which point one of the waiting thread’s lock will succeed, and the process begins again</p>
+        <p><strong>Condition Variables</strong></p>
+        <p>A Condition variable is synchronization mechanism that <br>allows multiple threads to conditionally wait, until some <br>defined time at which they can proceed.<br>Condition variables are different from mutexes because <br>they don’t protect code, but procedure.<br>A thread will wait on a condition variable until the <br>variable signals it can proceed.</p>
+        <p>‍<br><strong>Synchronization Primitives</strong></p>
+        <p>Counting Semaphores<br>• Permit a limited number of threads to execute a section of the code<br>Binary Semaphores - Mutexes<br>• Permit only one thread to execute a section of the code<br>Condition Variables<br>• Communicate information about the state of shared data</p>
+        <p><strong>Deadlocks</strong></p>
+        <p>When two or more competing processes are waiting for each other to release resources, and neither do</p>
+        <p>Deadlock Characterization<br>Mutual exclusion:  only one process at a time can use a resource<br>Hold and wait:  a process holding at least one resource is waiting to <br>acquire additional resources held by other processes<br>No preemption:  a resource can be released only voluntarily by the <br>process holding it, after that process has completed its task<br>Circular wait:  there exists a set {P0, P1, ..., Pn} of waiting processes <br>such that P0 is waiting for a resource that is held by P1, P1 is waiting for <br>a resource that is held by P2, ..., Pn–1 is waiting for a resource that is <br>held by Pn, and Pn is waiting for a resource that is held by P0.</p>
       </div>
     </div>
   </div>
